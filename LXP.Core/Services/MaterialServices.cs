@@ -99,11 +99,6 @@ namespace LXP.Core.Services
                     CreatedBy = item.CreatedBy,
                     ModifiedAt = item.ModifiedAt,
                     ModifiedBy = item.ModifiedBy
-
-
-
-
-
                 };
                 materialLists.Add(materialList);
             }
@@ -189,7 +184,8 @@ namespace LXP.Core.Services
 
 
         }
-        public async Task<MaterialListViewModel> GetMaterialDetailsByMaterialId(string materialId)
+        
+         public async Task<MaterialListViewModel> GetMaterialDetailsByMaterialId(string materialId)
         {
             Material material = await _materialRepository.GetMaterialByMaterialId(Guid.Parse(materialId));
             MaterialListViewModel materialView = new MaterialListViewModel()
@@ -202,7 +198,33 @@ namespace LXP.Core.Services
                                              _contextAccessor.HttpContext.Request.Scheme,
                                              _contextAccessor.HttpContext.Request.Host,
                                              _contextAccessor.HttpContext.Request.PathBase,
-                                             material.FilePath),_environment,
+                                             material.FilePath), _environment,
+                                                            _contextAccessor),
+                Duration = material.Duration,
+                IsActive = material.IsActive,
+                IsAvailable = material.IsAvailable,
+                CreatedAt = material.CreatedAt,
+                ModifiedAt = material.ModifiedAt,
+                ModifiedBy = material.ModifiedBy,
+                CreatedBy = material.CreatedBy
+
+            };
+            return materialView;
+        }
+        public async Task<MaterialListViewModel> GetMaterialDetailsByMaterialIdWithoutPDFConversionForUpdate(string materialId)
+        {
+            Material material = await _materialRepository.GetMaterialByMaterialId(Guid.Parse(materialId));
+            MaterialListViewModel materialView = new MaterialListViewModel()
+            {
+                MaterialId = material.MaterialId,
+                TopicName = material.Topic.Name,
+                MaterialType = material.MaterialType.Type,
+                Name = material.Name,
+                FilePath =  String.Format("{0}://{1}{2}/wwwroot/CourseMaterial/{3}",
+                                             _contextAccessor.HttpContext.Request.Scheme,
+                                             _contextAccessor.HttpContext.Request.Host,
+                                             _contextAccessor.HttpContext.Request.PathBase,
+                                             material.FilePath,_environment,
                                                             _contextAccessor),
                 Duration = material.Duration,
                 IsActive = material.IsActive,

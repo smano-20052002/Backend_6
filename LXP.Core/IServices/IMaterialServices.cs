@@ -12,5 +12,8 @@ namespace LXP.Core.IServices
         Task<bool> UpdateMaterial(MaterialUpdateViewModel material);
 
         Task<MaterialListViewModel> GetMaterialDetailsByMaterialId(string materialId);
+        
+        Task<MaterialListViewModel> GetMaterialDetailsByMaterialIdWithoutPDFConversionForUpdate(string materialId);
+
     }
 }

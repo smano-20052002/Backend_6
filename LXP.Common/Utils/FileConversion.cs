@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Spire.Presentation;
 using Spire.Doc;
 using Microsoft.AspNetCore.Hosting;
@@ -52,15 +48,14 @@ namespace LXP.Common.Utils
 
                 // Define the output PDF file path
                 string docFilePath = Path.ChangeExtension(fullFilePath, ".pdf");
-
                 // Save the document as a PDF
                 document.SaveToFile(docFilePath, Spire.Doc.FileFormat.PDF);
                 string relativeDocPdfPath = docFilePath.Replace(webRootPath, "").Replace("\\", "/");
                 return $"{contextAccessor.HttpContext.Request.Scheme}://{contextAccessor.HttpContext.Request.Host}{contextAccessor.HttpContext.Request.PathBase}/wwwroot{relativeDocPdfPath}";
 
             }
-            string relativePdfPath = FilePath.Replace(webRootPath, "").Replace("\\", "/");
-            return $"{contextAccessor.HttpContext.Request.Scheme}://{contextAccessor.HttpContext.Request.Host}{contextAccessor.HttpContext.Request.PathBase}/wwwroot{relativePdfPath}";
+            string relativePath = fullFilePath.Replace(webRootPath, "").Replace("\\", "/");
+            return $"{contextAccessor.HttpContext.Request.Scheme}://{contextAccessor.HttpContext.Request.Host}{contextAccessor.HttpContext.Request.PathBase}/wwwroot{relativePath}";
             //return fullFilePath.Split(".")[1];
               }
 

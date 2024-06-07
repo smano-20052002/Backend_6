@@ -2061,3 +2061,4 @@ D:\FinalCourseModuleOfSP5\Asha\LXP.Api\bin\Debug\net8.0\runtimes\win-arm64\nativ
 D:\FinalCourseModuleOfSP5\Asha\LXP.Api\bin\Debug\net8.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
 D:\FinalCourseModuleOfSP5\Asha\LXP.Api\bin\Debug\net8.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
 D:\FinalCourseModuleOfSP5\Asha\LXP.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\FinalCourseModuleOfSP5\Asha\LXP.Api\obj\Debug\net8.0\LXP.Api.sourcelink.json

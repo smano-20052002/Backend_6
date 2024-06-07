@@ -190,3 +190,4 @@ D:\FinalCourseModuleOfSP5\Asha\LXP.Common\obj\Debug\net8.0\LXP.Common.dll
 D:\FinalCourseModuleOfSP5\Asha\LXP.Common\obj\Debug\net8.0\refint\LXP.Common.dll
 D:\FinalCourseModuleOfSP5\Asha\LXP.Common\obj\Debug\net8.0\LXP.Common.pdb
 D:\FinalCourseModuleOfSP5\Asha\LXP.Common\obj\Debug\net8.0\ref\LXP.Common.dll
+D:\FinalCourseModuleOfSP5\Asha\LXP.Common\obj\Debug\net8.0\LXP.Common.sourcelink.json

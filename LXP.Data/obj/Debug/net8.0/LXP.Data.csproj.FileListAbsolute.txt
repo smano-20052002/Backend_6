@@ -265,3 +265,4 @@ D:\FinalCourseModuleOfSP5\Asha\LXP.Data\obj\Debug\net8.0\refint\LXP.Data.dll
 D:\FinalCourseModuleOfSP5\Asha\LXP.Data\obj\Debug\net8.0\LXP.Data.pdb
 D:\FinalCourseModuleOfSP5\Asha\LXP.Data\obj\Debug\net8.0\LXP.Data.genruntimeconfig.cache
 D:\FinalCourseModuleOfSP5\Asha\LXP.Data\obj\Debug\net8.0\ref\LXP.Data.dll
+D:\FinalCourseModuleOfSP5\Asha\LXP.Data\obj\Debug\net8.0\LXP.Data.sourcelink.json

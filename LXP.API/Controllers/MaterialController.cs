@@ -88,6 +88,12 @@ namespace LXP.Api.Controllers
             var material = await _materialService.GetMaterialDetailsByMaterialId(materialId);
             return Ok(CreateSuccessResponse(material));
         }
+        [HttpGet("/lxp/course/material/withoutpdfconversion/{materialId}")]
+        public async Task<IActionResult> GetMaterialByMaterialIdWithoutPDFConversionForUpdate(string materialId)
+        {
+            var material = await _materialService.GetMaterialDetailsByMaterialIdWithoutPDFConversionForUpdate(materialId);
+            return Ok(CreateSuccessResponse(material));
+        }
     }
 
 }
